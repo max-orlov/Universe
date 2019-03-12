@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<galaxy>
+    <name>G339</name>
+    <planet>
+        <name>P1</name>
+    </planet>
+    <planet>
+        <name>P700</name>
+    </planet>
+    <planet>
+        <name>P554</name>
+    </planet>
+    <planet>
+        <name>P206</name>
+    </planet>
+</galaxy>
