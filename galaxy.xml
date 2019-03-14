@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <galaxy>
-    <name>G339</name>
+    <name>G410</name>
     <planet>
-        <name>P1</name>
+        <name>P763</name>
     </planet>
     <planet>
-        <name>P700</name>
+        <name>P24</name>
     </planet>
     <planet>
-        <name>P554</name>
+        <name>P630</name>
     </planet>
     <planet>
-        <name>P206</name>
+        <name>P740</name>
     </planet>
 </galaxy>

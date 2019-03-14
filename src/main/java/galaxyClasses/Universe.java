@@ -3,10 +3,7 @@ package galaxyClasses;
 import generator.RandomGenerator;
 import javafx.util.Pair;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Timer;
@@ -14,8 +11,10 @@ import java.util.TimerTask;
 
 @XmlRootElement(name = "Universe")
 @XmlType(propOrder = { "name", "galaxy" })
+//@XmlSeeAlso({Galaxy.class, Planet.class})
 public class Universe{
 
+    @XmlElement
     private String name;
 
     @XmlElement(name = "galaxy")
@@ -55,19 +54,22 @@ public class Universe{
     public Pair<Integer, Integer> searchPlanet(String planetName) {
         for (int i = 0; i < galaxies.size(); i++) {
             Galaxy galaxy = galaxies.get(i);
-            int i1 = galaxy.searchPlanet(planetName);
-            if(i1 != -1)
-                return new Pair<>(i, i1);
+            int p = galaxy.searchPlanet(planetName);
+            if(p != -1)
+                return new Pair<>(i, p);
         }
         return null;
     }
 
-    public int searchPlanet(Planet planet) {
-        Galaxy galaxy = new Galaxy();
-        return galaxy.searchPlanet(planet);
+    public Pair<Integer, Integer> searchPlanet(Planet planet) {
+        for (int i = 0; i < galaxies.size(); i++) {
+            Galaxy galaxy = galaxies.get(i);
+            int p = galaxy.searchPlanet(planet);
+            if(p != -1)
+                return new Pair<>(i, p);
+        }
+        return null;
     }
-
-
 
     public void behavior() {
         System.out.println("Universe:" + "\n");
@@ -86,6 +88,6 @@ public class Universe{
 
     @Override
     public String toString() {
-        return "Universe: " + "\n{" + galaxies + '}';
+        return "Universe: " + "\n" + galaxies;
     }
 }
