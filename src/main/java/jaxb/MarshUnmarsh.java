@@ -40,7 +40,7 @@ public class MarshUnmarsh {
         universe.addGalaxy(RandomGenerator.galaxyGenerator());
         universe.addGalaxy(RandomGenerator.galaxyGenerator());
         universe.addGalaxy(RandomGenerator.galaxyGenerator());
-        FileOutputStream stream = new FileOutputStream("Universe.xml");
+        FileOutputStream stream = new FileOutputStream("Universe1.xml");
 
         JAXBContext context = JAXBContext.newInstance();
         Marshaller marshaller = context.createMarshaller();

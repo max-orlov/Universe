@@ -24,7 +24,7 @@ public class Planet {
     }
 
     public void setName(String name) {
-        this.name = "P" + RandomGenerator.numGenerator(1,1000);
+        this.name = name;
     }
 
     public String getName() {

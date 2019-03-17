@@ -41,6 +41,10 @@ public class Galaxy {
         this.planets.addAll(Arrays.asList(planets));
     }
 
+    public ArrayList<Planet> getPlanets() {
+        return planets;
+    }
+
     public void removePlanet(String planetName) {
         for (int i = 0; i < this.planets.size(); i++) {
             if(planets.get(i).getName().equals(planetName))

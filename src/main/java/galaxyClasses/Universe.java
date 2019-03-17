@@ -11,7 +11,7 @@ import java.util.TimerTask;
 
 @XmlRootElement(name = "Universe")
 @XmlType(propOrder = { "name", "galaxy" })
-//@XmlSeeAlso({Galaxy.class, Planet.class})
+@XmlSeeAlso({Galaxy.class, Planet.class})
 public class Universe{
 
     @XmlElement
@@ -50,6 +50,12 @@ public class Universe{
         }
         return -1;
     }
+
+    public ArrayList<Galaxy> getGalaxies() {
+        return galaxies;
+    }
+
+
 
     public Pair<Integer, Integer> searchPlanet(String planetName) {
         for (int i = 0; i < galaxies.size(); i++) {
