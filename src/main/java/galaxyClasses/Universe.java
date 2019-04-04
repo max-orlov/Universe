@@ -10,7 +10,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 @XmlRootElement(name = "Universe")
-@XmlType(propOrder = { "name", "galaxy" })
+@XmlType(propOrder = { "name"})
 @XmlSeeAlso({Galaxy.class, Planet.class})
 public class Universe{
 
